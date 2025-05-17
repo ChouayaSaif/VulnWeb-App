@@ -1017,13 +1017,24 @@ def admin_panel():
     db = get_db()
     cursor = db.cursor()
     
-    # Get all users with their credit card info
-    # Modified query to match your actual database schema
-    cursor.execute("""
-        SELECT id, username, credit_card_hash, created_at, last_login, status
+    # First, let's get the actual column names from the users table to avoid errors
+    cursor.execute("PRAGMA table_info(users)")
+    columns_info = cursor.fetchall()
+    column_names = [col[1] for col in columns_info]  # Extract column names
+    
+    # Build a dynamic query based on available columns
+    available_columns = []
+    for col in ['id', 'username', 'created_at', 'last_login', 'status']:
+        if col in column_names:
+            available_columns.append(col)
+    
+    # Get all users with available columns
+    query = f"""
+        SELECT {', '.join(available_columns)}
         FROM users
         ORDER BY id
-    """)
+    """
+    cursor.execute(query)
     users = cursor.fetchall()
     
     # Get total sales amount
@@ -1074,6 +1085,7 @@ def admin_panel():
     
     return render_template_string(ADMIN_DASHBOARD_TEMPLATE,
                                  users=users,
+                                 user_columns=available_columns,
                                  total_sales_amount=total_sales_amount,
                                  total_sales_count=total_sales_count,
                                  total_products=total_products,
@@ -1567,41 +1579,34 @@ ADMIN_DASHBOARD_TEMPLATE = """
             </div>
             
             <div class="table-container">
-                <h2 class="table-title">User Information (Including Credit Card Data)</h2>
+                <h2 class="table-title">User Information</h2>
                 <table>
                     <thead>
                         <tr>
-                            <th>ID</th>
-                            <th>Username</th>
-                            <th>Credit Card Hash (MD5)</th>
-                            <th>Created</th>
-                            <th>Last Login</th>
-                            <th>Status</th>
+                            {% for column in user_columns %}
+                            <th>{{ column|title }}</th>
+                            {% endfor %}
                             <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
                         {% for user in users %}
                         <tr>
-                            <td>{{ user[0] }}</td>
-                            <td>{{ user[1] }}</td>
+                            {% for i in range(user|length) %}
                             <td>
-                                <div class="tooltip">
-                                    {{ user[2] }}
-                                    <span class="tooltiptext">Vulnerable MD5 hash!</span>
-                                </div>
-                            </td>
-                            <td>{{ user[3] }}</td>
-                            <td>{{ user[4] }}</td>
-                            <td>
-                                {% if user[5] == 'active' %}
-                                <span class="status status-active">Active</span>
-                                {% elif user[5] == 'inactive' %}
-                                <span class="status status-inactive">Inactive</span>
+                                {% if user_columns[i] == 'status' %}
+                                    {% if user[i] == 'active' %}
+                                    <span class="status status-active">Active</span>
+                                    {% elif user[i] == 'inactive' %}
+                                    <span class="status status-inactive">Inactive</span>
+                                    {% else %}
+                                    <span class="status status-suspended">Suspended</span>
+                                    {% endif %}
                                 {% else %}
-                                <span class="status status-suspended">Suspended</span>
+                                    {{ user[i] }}
                                 {% endif %}
                             </td>
+                            {% endfor %}
                             <td>
                                 <button class="button button-view"><i class="fas fa-eye"></i></button>
                                 <button class="button button-edit"><i class="fas fa-edit"></i></button>
@@ -1733,25 +1738,12 @@ ADMIN_DASHBOARD_TEMPLATE = """
             }
         });
         
-        // Tooltip functionality
-        const tooltips = document.querySelectorAll('.tooltip');
-        tooltips.forEach(tooltip => {
-            tooltip.addEventListener('mouseover', function() {
-                this.querySelector('.tooltiptext').style.visibility = 'visible';
-                this.querySelector('.tooltiptext').style.opacity = '1';
-            });
-            
-            tooltip.addEventListener('mouseout', function() {
-                this.querySelector('.tooltiptext').style.visibility = 'hidden';
-                this.querySelector('.tooltiptext').style.opacity = '0';
-            });
-        });
-        
         // Action buttons functionality
         const viewButtons = document.querySelectorAll('.button-view');
         viewButtons.forEach(button => {
             button.addEventListener('click', function() {
-                const userId = this.closest('tr').querySelector('td:first-child').textContent;
+                // Getting the ID from the first column (assuming ID is always the first column)
+                const userId = this.closest('tr').querySelector('td:first-child').textContent.trim();
                 alert('Viewing user with ID: ' + userId);
                 // Here you would redirect to a user details page
             });
@@ -1760,7 +1752,7 @@ ADMIN_DASHBOARD_TEMPLATE = """
         const editButtons = document.querySelectorAll('.button-edit');
         editButtons.forEach(button => {
             button.addEventListener('click', function() {
-                const userId = this.closest('tr').querySelector('td:first-child').textContent;
+                const userId = this.closest('tr').querySelector('td:first-child').textContent.trim();
                 alert('Editing user with ID: ' + userId);
                 // Here you would redirect to a user edit page
             });
@@ -1769,8 +1761,8 @@ ADMIN_DASHBOARD_TEMPLATE = """
         const deleteButtons = document.querySelectorAll('.button-delete');
         deleteButtons.forEach(button => {
             button.addEventListener('click', function() {
-                const userId = this.closest('tr').querySelector('td:first-child').textContent;
-                const userName = this.closest('tr').querySelector('td:nth-child(2)').textContent;
+                const userId = this.closest('tr').querySelector('td:first-child').textContent.trim();
+                const userName = this.closest('tr').querySelector('td:nth-child(2)').textContent.trim();
                 if (confirm('Are you sure you want to delete user ' + userName + ' (ID: ' + userId + ')?')) {
                     alert('User deleted successfully!');
                     // Here you would send an AJAX request to delete the user
