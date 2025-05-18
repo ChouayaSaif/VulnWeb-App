@@ -1085,6 +1085,39 @@ def process_register():
         return render_template_string(REGISTER_TEMPLATE, error=f"Database error: {str(e)}")
     
 
+@app.route('/admin/logs')
+def view_logs():
+    if session.get('username') != 'administrator':
+        return redirect('/')
+    
+    log_entries = activity_logger.get_activity_logs(100)
+    
+    return render_template_string('''
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>System Logs</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 20px; }
+            h1 { color: #333; }
+            pre { 
+                background-color: #f5f5f5;
+                padding: 15px;
+                border-radius: 5px;
+                overflow-x: auto;
+                white-space: pre-wrap;
+                word-wrap: break-word;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>System Activity Logs</h1>
+        <pre>{% for entry in log_entries %}{{ entry }}{% endfor %}</pre>
+    </body>
+    </html>
+    ''', log_entries=log_entries)
+
+
 
 @app.route('/logout', methods=['GET', 'POST'])
 def logout():
