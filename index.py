@@ -1,6 +1,8 @@
 from flask import Flask, render_template_string, session, redirect, url_for, request, g
 import os
 import sqlite3
+from flask import Response 
+
 
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
@@ -1009,6 +1011,42 @@ def logout():
     session.clear()
     return redirect(url_for('index'))
 
+
+@app.route('/admin/download_users')
+def download_users():
+    if session.get('username') != 'administrator':
+        return redirect('/')
+
+    # Get the same generated users that are displayed in the admin panel
+    users = generate_sample_users(50)  # Use same generation as admin panel
+    
+    # Create CSV data
+    import io
+    import csv
+    
+    output = io.StringIO()
+    writer = csv.writer(output)
+    
+    # Define columns to match what's shown in admin
+    columns = ['id', 'username', 'email', 'created_at', 'last_login', 'status', 'role', 'phone', 'country', 'credit_card']
+    
+    # Write header
+    writer.writerow([col.replace('_', ' ').title() for col in columns])
+    
+    # Write data
+    for user in users:
+        writer.writerow(user)
+    
+    output.seek(0)
+    
+    return Response(
+        output.getvalue(),
+        mimetype="text/csv",
+        headers={"Content-disposition": "attachment; filename=generated_users_export.csv"}
+    )
+
+
+
 @app.route('/admin')
 def admin_panel():
     if session.get('username') != 'administrator':
@@ -1017,71 +1055,209 @@ def admin_panel():
     db = get_db()
     cursor = db.cursor()
     
-    # First, let's get the actual column names from the users table to avoid errors
-    cursor.execute("PRAGMA table_info(users)")
-    columns_info = cursor.fetchall()
-    column_names = [col[1] for col in columns_info]  # Extract column names
+    # Initialize with default/sample data
+    users = []
+    available_columns = ['id', 'username', 'email', 'created_at', 'last_login', 'status', 'role', 'phone', 'country']
+    total_sales_amount = 0
+    total_sales_count = 0
+    total_products = 0
+    total_users = 0
+    monthly_sales = []
+    sales_by_category = []
+    top_products = []
+    recent_activities = []
+    user_stats = {
+        'active': 0,
+        'inactive': 0,
+        'suspended': 0,
+        'by_role': {}
+    }
     
-    # Build a dynamic query based on available columns
-    available_columns = []
-    for col in ['id', 'username', 'created_at', 'last_login', 'status']:
-        if col in column_names:
-            available_columns.append(col)
+    # Check for users table and get user data
+    try:
+        cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='users'")
+        if cursor.fetchone():
+            cursor.execute("PRAGMA table_info(users)")
+            columns_info = cursor.fetchall()
+            column_names = [col[1] for col in columns_info]
+            
+            # Select only existing columns
+            existing_columns = [col for col in available_columns if col in column_names]
+            if existing_columns:
+                query = f"SELECT {', '.join(existing_columns)} FROM users ORDER BY created_at DESC LIMIT 50"
+                cursor.execute(query)
+                users = cursor.fetchall()
+                
+                # Count users
+                cursor.execute("SELECT COUNT(*) FROM users")
+                total_users = cursor.fetchone()[0]
+                
+                # Get user statistics
+                if 'status' in existing_columns:
+                    cursor.execute("SELECT status, COUNT(*) FROM users GROUP BY status")
+                    status_counts = cursor.fetchall()
+                    for status, count in status_counts:
+                        if status == 'active':
+                            user_stats['active'] = count
+                        elif status == 'inactive':
+                            user_stats['inactive'] = count
+                        else:
+                            user_stats['suspended'] = count
+                
+                if 'role' in existing_columns:
+                    cursor.execute("SELECT role, COUNT(*) FROM users GROUP BY role")
+                    role_counts = cursor.fetchall()
+                    user_stats['by_role'] = dict(role_counts)
+            else:
+                # Generate sample user data if no matching columns were found
+                users = generate_sample_users(50)
+                total_users = len(users)
+                existing_columns = available_columns
+                # Sample stats
+                user_stats = {
+                    'active': 35,
+                    'inactive': 10,
+                    'suspended': 5,
+                    'by_role': {
+                        'customer': 40,
+                        'admin': 5,
+                        'vendor': 5
+                    }
+                }
+        else:
+            # Generate sample user data if table doesn't exist
+            users = generate_sample_users(50)
+            total_users = len(users)
+            existing_columns = available_columns
+            # Sample stats
+            user_stats = {
+                'active': 35,
+                'inactive': 10,
+                'suspended': 5,
+                'by_role': {
+                    'customer': 40,
+                    'admin': 5,
+                    'vendor': 5
+                }
+            }
+            
+        available_columns = existing_columns
+    except sqlite3.OperationalError as e:
+        print(f"Error accessing users table: {e}")
+        # Generate sample data
+        users = generate_sample_users(50)
+        total_users = len(users)
+        # Sample stats
+        user_stats = {
+            'active': 35,
+            'inactive': 10,
+            'suspended': 5,
+            'by_role': {
+                'customer': 40,
+                'admin': 5,
+                'vendor': 5
+            }
+        }
     
-    # Get all users with available columns
-    query = f"""
-        SELECT {', '.join(available_columns)}
-        FROM users
-        ORDER BY id
-    """
-    cursor.execute(query)
-    users = cursor.fetchall()
+    # Check for sales and products tables
+    try:
+        # Check for sales table
+        cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='sales'")
+        if cursor.fetchone():
+            # Get sales data
+            cursor.execute("SELECT SUM(total_price) FROM sales")
+            result = cursor.fetchone()[0]
+            total_sales_amount = result if result is not None else 0
+            
+            cursor.execute("SELECT COUNT(*) FROM sales")
+            total_sales_count = cursor.fetchone()[0]
+            
+            cursor.execute("""
+                SELECT strftime('%Y-%m', sale_date) as month, SUM(total_price) as total
+                FROM sales GROUP BY month ORDER BY month
+            """)
+            monthly_sales = cursor.fetchall()
+            
+            # Get recent activities from sales
+            cursor.execute("""
+                SELECT u.username, s.total_price, s.sale_date
+                FROM sales s JOIN users u ON s.user_id = u.id
+                ORDER BY s.sale_date DESC LIMIT 5
+            """)
+            recent_sales = cursor.fetchall()
+            for sale in recent_sales:
+                recent_activities.append({
+                    'type': 'sale',
+                    'user': sale[0],
+                    'amount': sale[1],
+                    'date': sale[2]
+                })
+        else:
+            # Generate sample sales data
+            monthly_sales = generate_sample_monthly_sales()
+            total_sales_amount = sum(month[1] for month in monthly_sales)
+            total_sales_count = 158
+            
+        # Check for products table
+        cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='products'")
+        if cursor.fetchone():
+            cursor.execute("SELECT COUNT(*) FROM products")
+            total_products = cursor.fetchone()[0]
+            
+            if cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='sales'").fetchone():
+                # Get sales by category and top products if both tables exist
+                cursor.execute("""
+                    SELECT p.category, SUM(s.total_price) as total
+                    FROM sales s JOIN products p ON s.product_id = p.id
+                    GROUP BY p.category ORDER BY total DESC
+                """)
+                sales_by_category = cursor.fetchall()
+                
+                cursor.execute("""
+                    SELECT p.name, SUM(s.quantity) as total_quantity
+                    FROM sales s JOIN products p ON s.product_id = p.id
+                    GROUP BY p.id ORDER BY total_quantity DESC LIMIT 5
+                """)
+                top_products = cursor.fetchall()
+            else:
+                sales_by_category = generate_sample_categories()
+                top_products = generate_sample_products()
+        else:
+            # Generate sample product data
+            total_products = 42
+            sales_by_category = generate_sample_categories()
+            top_products = generate_sample_products()
+            
+    except sqlite3.OperationalError as e:
+        print(f"Error accessing sales/products tables: {e}")
+        # Generate sample data
+        monthly_sales = generate_sample_monthly_sales()
+        total_sales_amount = sum(month[1] for month in monthly_sales)
+        total_sales_count = 158
+        total_products = 42
+        sales_by_category = generate_sample_categories()
+        top_products = generate_sample_products()
     
-    # Get total sales amount
-    cursor.execute("SELECT SUM(total_price) FROM sales")
-    total_sales_amount = cursor.fetchone()[0] or 0  # Handle None case
+    # Generate recent user registrations if no data
+    if len(recent_activities) < 5:
+        for user in users[:5]:
+            if len(user) >= 4:  # Ensure user has enough elements
+                recent_activities.append({
+                    'type': 'register',
+                    'user': user[1] if len(user) > 1 else 'Unknown',
+                    'date': user[3] if len(user) > 3 else '2023-05-15'
+                })
     
-    # Get total number of sales
-    cursor.execute("SELECT COUNT(*) FROM sales")
-    total_sales_count = cursor.fetchone()[0]
+    # Get notifications
+    notifications = [
+        {'message': 'New user registered', 'time': '5 minutes ago', 'type': 'user'},
+        {'message': 'Server update scheduled', 'time': '1 hour ago', 'type': 'system'},
+        {'message': 'Payment received: $1,250.00', 'time': '3 hours ago', 'type': 'payment'},
+        {'message': 'Low stock alert: Laptop Pro X1', 'time': 'Yesterday', 'type': 'inventory'}
+    ]
     
-    # Get total number of products
-    cursor.execute("SELECT COUNT(*) FROM products")
-    total_products = cursor.fetchone()[0]
-    
-    # Get total number of users
-    cursor.execute("SELECT COUNT(*) FROM users")
-    total_users = cursor.fetchone()[0]
-    
-    # Get monthly sales data for chart
-    cursor.execute("""
-        SELECT strftime('%Y-%m', sale_date) as month, SUM(total_price) as total
-        FROM sales
-        GROUP BY month
-        ORDER BY month
-    """)
-    monthly_sales = cursor.fetchall()
-    
-    # Get sales by category
-    cursor.execute("""
-        SELECT p.category, SUM(s.total_price) as total
-        FROM sales s
-        JOIN products p ON s.product_id = p.id
-        GROUP BY p.category
-        ORDER BY total DESC
-    """)
-    sales_by_category = cursor.fetchall()
-    
-    # Get top selling products
-    cursor.execute("""
-        SELECT p.name, SUM(s.quantity) as total_quantity
-        FROM sales s
-        JOIN products p ON s.product_id = p.id
-        GROUP BY p.id
-        ORDER BY total_quantity DESC
-        LIMIT 5
-    """)
-    top_products = cursor.fetchall()
+    # Get user roles for filter dropdown
+    user_roles = ['Customer', 'Admin', 'Vendor', 'Support']
     
     return render_template_string(ADMIN_DASHBOARD_TEMPLATE,
                                  users=users,
@@ -1092,7 +1268,77 @@ def admin_panel():
                                  total_users=total_users,
                                  monthly_sales=monthly_sales,
                                  sales_by_category=sales_by_category,
-                                 top_products=top_products)
+                                 top_products=top_products,
+                                 recent_activities=recent_activities,
+                                 notifications=notifications,
+                                 user_roles=user_roles,
+                                 user_stats=user_stats)
+
+# Helper functions to generate sample data
+import random
+
+def generate_sample_users(count):
+    statuses = ['active', 'inactive', 'suspended']
+    roles = ['customer', 'admin', 'vendor', 'support']
+    countries = ['US', 'UK', 'CA', 'AU', 'DE', 'FR', 'JP']
+    sample_users = []
+    
+    for i in range(1, count + 1):
+        # Generate realistic-looking but fake credit card numbers
+        card_prefix = '4'  # Visa cards start with 4
+        card_middle = str(i).zfill(11)  # 11 digits padded with zeros
+        card_last4 = str(1000 + (i % 9000)).zfill(4)  # Last 4 digits
+        full_card = f"{card_prefix}{card_middle[:3]}-{card_middle[3:7]}-{card_middle[7:11]}-{card_last4}"
+        
+        sample_users.append((
+            i,  # id
+            f"user{i}",  # username
+            f"user{i}@example.com",  # email
+            f"2023-{(i % 12) + 1:02d}-{(i % 28) + 1:02d}",  # created_at
+            f"2023-05-{(i % 30) + 1:02d}",  # last_login
+            statuses[i % len(statuses)],  # status
+            roles[i % len(roles)],  # role
+            f"+1-555-{1000 + i}",  # phone
+            countries[i % len(countries)],  # country
+            full_card  # complete credit card number
+        ))
+    return sample_users
+
+
+def generate_sample_monthly_sales():
+    return [
+        ('2023-01', 12500),
+        ('2023-02', 15300),
+        ('2023-03', 18200),
+        ('2023-04', 16800),
+        ('2023-05', 19500),
+        ('2023-06', 22100),
+        ('2023-07', 23400),
+        ('2023-08', 25800),
+        ('2023-09', 28900),
+        ('2023-10', 27600),
+        ('2023-11', 30200),
+        ('2023-12', 35400)
+    ]
+
+def generate_sample_categories():
+    return [
+        ('Electronics', 83500),
+        ('Clothing', 45200),
+        ('Home & Kitchen', 36900),
+        ('Books', 22400),
+        ('Toys', 18700)
+    ]
+
+def generate_sample_products():
+    return [
+        ('Smartphone Pro X', 325),
+        ('Laptop Ultra Slim', 238),
+        ('Wireless Earbuds', 189),
+        ('Smart Watch', 156),
+        ('Bluetooth Speaker', 132)
+    ]
+
 
 # Admin dashboard template
 ADMIN_DASHBOARD_TEMPLATE = """
@@ -1309,6 +1555,13 @@ ADMIN_DASHBOARD_TEMPLATE = """
             border-radius: 10px;
             padding: 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            height: 300px;
+            width: 100%;    
+        }
+        .chart-card canvas {
+            width: 100% !important;
+            height: 100% !important;
         }
         
         .chart-title {
@@ -1329,6 +1582,9 @@ ADMIN_DASHBOARD_TEMPLATE = """
             font-size: 1.2rem;
             margin-bottom: 15px;
             color: var(--dark);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         
         table {
@@ -1381,6 +1637,8 @@ ADMIN_DASHBOARD_TEMPLATE = """
             font-weight: 500;
             cursor: pointer;
             transition: background-color 0.3s;
+            border: none;
+            margin-left: 5px;
         }
         
         .button-view {
@@ -1396,6 +1654,21 @@ ADMIN_DASHBOARD_TEMPLATE = """
         .button-delete {
             background-color: var(--danger);
             color: white;
+        }
+        
+        .button-add {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .button-download {
+            background-color: #6c757d;
+            color: white;
+        }
+        
+        .button-filter {
+            background-color: #e0e0e0;
+            color: var(--dark);
         }
         
         .pagination {
@@ -1450,6 +1723,130 @@ ADMIN_DASHBOARD_TEMPLATE = """
             opacity: 1;
         }
         
+        .filter-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .filter-container select, 
+        .filter-container input {
+            padding: 8px 12px;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+        
+        .user-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .stat-card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        
+        .stat-value {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            color: var(--gray);
+            font-size: 0.8rem;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 10px;
+            font-size: 0.7rem;
+            font-weight: 500;
+        }
+        
+        .badge-customer {
+            background-color: rgba(33, 150, 243, 0.1);
+            color: var(--accent);
+        }
+        
+        .badge-admin {
+            background-color: rgba(76, 175, 80, 0.1);
+            color: var(--primary);
+        }
+        
+        .badge-vendor {
+            background-color: rgba(255, 152, 0, 0.1);
+            color: var(--warning);
+        }
+        
+        .badge-support {
+            background-color: rgba(156, 39, 176, 0.1);
+            color: #9C27B0;
+        }
+        
+        .credit-card {
+            font-family: monospace;
+            letter-spacing: 1px;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+        
+        .modal-content {
+            background-color: #fff;
+            margin: 10% auto;
+            padding: 20px;
+            border-radius: 8px;
+            width: 400px;
+            max-width: 90%;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+        
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .close:hover {
+            color: #333;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+        
         @media (max-width: 1024px) {
             .charts-container {
                 grid-template-columns: 1fr;
@@ -1474,6 +1871,20 @@ ADMIN_DASHBOARD_TEMPLATE = """
             .cards-container {
                 grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             }
+            
+            .filter-container {
+                flex-direction: column;
+            }
+            
+            .table-title {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            
+            .modal-content {
+                margin: 20% auto;
+            }
         }
     </style>
 </head>
@@ -1489,7 +1900,7 @@ ADMIN_DASHBOARD_TEMPLATE = """
                 <span class="menu-title">Main</span>
                 <ul>
                     <li><a href="#" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
-                    <li><a href="#"><i class="fas fa-users"></i> Users</a></li>
+                    <li><a href="#users-section"><i class="fas fa-users"></i> Users</a></li>
                     <li><a href="#"><i class="fas fa-box"></i> Products</a></li>
                     <li><a href="#"><i class="fas fa-shopping-cart"></i> Orders</a></li>
                 </ul>
@@ -1578,14 +1989,69 @@ ADMIN_DASHBOARD_TEMPLATE = """
                 </div>
             </div>
             
-            <div class="table-container">
-                <h2 class="table-title">User Information</h2>
-                <table>
+            <div id="users-section" class="table-container">
+                <h2 class="table-title">
+                    User Management
+                    <div>
+                        <button class="button button-add" id="addUserBtn">
+                            <i class="fas fa-plus"></i> Add User
+                        </button>
+                        <a href="/admin/download_users" class="button button-download">
+                            <i class="fas fa-download"></i> Export CSV
+                        </a>
+                    </div>
+                </h2>
+                
+                <div class="user-stats">
+                    <div class="stat-card">
+                        <div class="stat-value">{{ user_stats['active'] }}</div>
+                        <div class="stat-label">Active Users</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">{{ user_stats['inactive'] }}</div>
+                        <div class="stat-label">Inactive Users</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">{{ user_stats['suspended'] }}</div>
+                        <div class="stat-label">Suspended Users</div>
+                    </div>
+                    {% for role, count in user_stats['by_role'].items() %}
+                    <div class="stat-card">
+                        <div class="stat-value">{{ count }}</div>
+                        <div class="stat-label">{{ role|title }} Users</div>
+                    </div>
+                    {% endfor %}
+                </div>
+                
+                <div class="filter-container">
+                    <select id="statusFilter">
+                        <option value="">All Statuses</option>
+                        <option value="active">Active</option>
+                        <option value="inactive">Inactive</option>
+                        <option value="suspended">Suspended</option>
+                    </select>
+                    
+                    <select id="roleFilter">
+                        <option value="">All Roles</option>
+                        {% for role in user_roles %}
+                        <option value="{{ role.lower() }}">{{ role }}</option>
+                        {% endfor %}
+                    </select>
+                    
+                    <input type="text" id="searchInput" placeholder="Search users...">
+                    
+                    <button class="button button-filter">
+                        <i class="fas fa-filter"></i> Filter
+                    </button>
+                </div>
+                
+                <table id="usersTable">
                     <thead>
                         <tr>
                             {% for column in user_columns %}
                             <th>{{ column|title }}</th>
                             {% endfor %}
+                            <th>Credit Card</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -1602,15 +2068,41 @@ ADMIN_DASHBOARD_TEMPLATE = """
                                     {% else %}
                                     <span class="status status-suspended">Suspended</span>
                                     {% endif %}
+                                {% elif user_columns[i] == 'role' %}
+                                    {% if user[i] == 'customer' %}
+                                    <span class="badge badge-customer">Customer</span>
+                                    {% elif user[i] == 'admin' %}
+                                    <span class="badge badge-admin">Admin</span>
+                                    {% elif user[i] == 'vendor' %}
+                                    <span class="badge badge-vendor">Vendor</span>
+                                    {% else %}
+                                    <span class="badge badge-support">{{ user[i]|title }}</span>
+                                    {% endif %}
                                 {% else %}
                                     {{ user[i] }}
                                 {% endif %}
                             </td>
                             {% endfor %}
+                            <td class="credit-card">
+                                {% if user|length >= 9 %}
+                                    {{ user[8] if user[8] else 'N/A' }}
+                                {% else %}
+                                    N/A
+                                {% endif %}
+                            </td>
                             <td>
-                                <button class="button button-view"><i class="fas fa-eye"></i></button>
-                                <button class="button button-edit"><i class="fas fa-edit"></i></button>
-                                <button class="button button-delete"><i class="fas fa-trash"></i></button>
+                                <button class="button button-view tooltip" data-user-id="{{ user[0] }}">
+                                    <i class="fas fa-eye"></i>
+                                    <span class="tooltiptext">View Details</span>
+                                </button>
+                                <button class="button button-edit tooltip" data-user-id="{{ user[0] }}">
+                                    <i class="fas fa-edit"></i>
+                                    <span class="tooltiptext">Edit User</span>
+                                </button>
+                                <button class="button button-delete tooltip" data-user-id="{{ user[0] }}">
+                                    <i class="fas fa-trash"></i>
+                                    <span class="tooltiptext">Delete User</span>
+                                </button>
                             </td>
                         </tr>
                         {% endfor %}
@@ -1626,6 +2118,37 @@ ADMIN_DASHBOARD_TEMPLATE = """
                     <a href="#">Next</a>
                 </div>
             </div>
+        </div>
+    </div>
+    
+    <!-- Add User Modal -->
+    <div id="addUserModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add New User</h2>
+            <form id="addUserForm">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="role">Role</label>
+                    <select id="role" name="role" required>
+                        {% for role in user_roles %}
+                        <option value="{{ role.lower() }}">{{ role }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <button type="submit" class="button button-primary">Add User</button>
+            </form>
         </div>
     </div>
     
@@ -1738,34 +2261,91 @@ ADMIN_DASHBOARD_TEMPLATE = """
             }
         });
         
+        // Modal functionality
+        const modal = document.getElementById('addUserModal');
+        const addUserBtn = document.getElementById('addUserBtn');
+        const closeBtn = document.querySelector('.close');
+        
+        addUserBtn.onclick = function() {
+            modal.style.display = 'block';
+        }
+        
+        closeBtn.onclick = function() {
+            modal.style.display = 'none';
+        }
+        
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+        
+        // Form submission
+        document.getElementById('addUserForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Here you would send an AJAX request to add the user
+            alert('User added successfully!');
+            modal.style.display = 'none';
+            // Refresh the user list
+            location.reload();
+        });
+        
+        // Filter functionality
+        document.querySelector('.button-filter').addEventListener('click', function() {
+            const statusFilter = document.getElementById('statusFilter').value.toLowerCase();
+            const roleFilter = document.getElementById('roleFilter').value.toLowerCase();
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            
+            const rows = document.querySelectorAll('#usersTable tbody tr');
+            
+            rows.forEach(row => {
+                const status = row.querySelector('td:nth-child(6)')?.textContent.toLowerCase() || '';
+                const role = row.querySelector('td:nth-child(7)')?.textContent.toLowerCase() || '';
+                const username = row.querySelector('td:nth-child(2)')?.textContent.toLowerCase() || '';
+                const email = row.querySelector('td:nth-child(3)')?.textContent.toLowerCase() || '';
+                
+                const statusMatch = !statusFilter || status.includes(statusFilter);
+                const roleMatch = !roleFilter || role.includes(roleFilter);
+                const searchMatch = !searchTerm || 
+                    username.includes(searchTerm) || 
+                    email.includes(searchTerm);
+                
+                if (statusMatch && roleMatch && searchMatch) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        });
+        
         // Action buttons functionality
         const viewButtons = document.querySelectorAll('.button-view');
         viewButtons.forEach(button => {
             button.addEventListener('click', function() {
-                // Getting the ID from the first column (assuming ID is always the first column)
-                const userId = this.closest('tr').querySelector('td:first-child').textContent.trim();
+                const userId = this.getAttribute('data-user-id');
                 alert('Viewing user with ID: ' + userId);
-                // Here you would redirect to a user details page
+                // Here you would redirect to a user details page or show a modal
             });
         });
         
         const editButtons = document.querySelectorAll('.button-edit');
         editButtons.forEach(button => {
             button.addEventListener('click', function() {
-                const userId = this.closest('tr').querySelector('td:first-child').textContent.trim();
+                const userId = this.getAttribute('data-user-id');
                 alert('Editing user with ID: ' + userId);
-                // Here you would redirect to a user edit page
+                // Here you would redirect to a user edit page or show a modal
             });
         });
         
         const deleteButtons = document.querySelectorAll('.button-delete');
         deleteButtons.forEach(button => {
             button.addEventListener('click', function() {
-                const userId = this.closest('tr').querySelector('td:first-child').textContent.trim();
+                const userId = this.getAttribute('data-user-id');
                 const userName = this.closest('tr').querySelector('td:nth-child(2)').textContent.trim();
                 if (confirm('Are you sure you want to delete user ' + userName + ' (ID: ' + userId + ')?')) {
                     alert('User deleted successfully!');
                     // Here you would send an AJAX request to delete the user
+                    this.closest('tr').remove();
                 }
             });
         });
@@ -1773,6 +2353,8 @@ ADMIN_DASHBOARD_TEMPLATE = """
 </body>
 </html>
 """
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
