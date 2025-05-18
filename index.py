@@ -2,10 +2,12 @@ from flask import Flask, render_template_string, session, redirect, url_for, req
 import os
 import sqlite3
 from flask import Response 
-
+from logs import activity_logger
 
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
+activity_logger.init_app(app)
+
 
 # Database setup
 def get_db():
@@ -910,7 +912,23 @@ def index():
 @app.route('/marketplace')
 def marketplace():
     if 'username' not in session:
+        activity_logger.log_activity(
+            activity_type='access',
+            details='Unauthorized access attempt to marketplace',
+            status='failed',
+            request=request
+        )
         return redirect(url_for('login'))
+    
+    # Log marketplace access
+    activity_logger.log_activity(
+        activity_type='access',
+        details='Accessed marketplace',
+        status='success',
+        user_id=session.get('user_id'),
+        username=session.get('username'),
+        request=request
+    )
     
     # Get selected category filter
     category = request.args.get('category', '')
@@ -951,6 +969,8 @@ def register():
         return redirect(url_for('marketplace'))
     return render_template_string(REGISTER_TEMPLATE)
 
+
+
 @app.route('/process_login', methods=['POST'])
 def process_login():
     username = request.form.get('username', '')
@@ -966,14 +986,41 @@ def process_login():
             session['username'] = user['username']
             session['user_id'] = user['id']
             
+            # Log successful login
+            activity_logger.log_activity(
+                activity_type='login',
+                details='User logged in successfully',
+                status='success',
+                user_id=user['id'],
+                username=user['username'],
+                request=request
+            )
+            
             if username == 'administrator':
                 return redirect('/admin')
             else:
                 return redirect(url_for('marketplace'))
         else:
+            # Log failed login attempt
+            activity_logger.log_login_attempt(
+                username=username,
+                status='failed',
+                request=request,
+                details='Invalid credentials'
+            )
             return render_template_string(LOGIN_TEMPLATE, error="Invalid credentials! Please try again.")
     except sqlite3.Error as e:
+        # Log database error during login
+        activity_logger.log_login_attempt(
+            username=username,
+            status='error',
+            request=request,
+            details=f'Database error: {str(e)}'
+        )
         return render_template_string(LOGIN_TEMPLATE, error=f"Database error: {str(e)}")
+    
+
+
 
 @app.route('/process_register', methods=['POST'])
 def process_register():
@@ -982,6 +1029,13 @@ def process_register():
     confirm_password = request.form.get('confirm_password', '')
     
     if password != confirm_password:
+        activity_logger.log_activity(
+            activity_type='registration',
+            details='Password mismatch during registration',
+            status='failed',
+            username=username,
+            request=request
+        )
         return render_template_string(REGISTER_TEMPLATE, error="Passwords do not match!")
     
     try:
@@ -991,6 +1045,13 @@ def process_register():
         # Check if username already exists
         cursor.execute("SELECT * FROM users WHERE username = ?", (username,))
         if cursor.fetchone():
+            activity_logger.log_activity(
+                activity_type='registration',
+                details='Username already exists',
+                status='failed',
+                username=username,
+                request=request
+            )
             return render_template_string(REGISTER_TEMPLATE, error="Username already exists!")
         
         # Insert new user
@@ -1002,12 +1063,41 @@ def process_register():
         user = cursor.fetchone()
         session['user_id'] = user['id']
         
+        # Log successful registration
+        activity_logger.log_activity(
+            activity_type='registration',
+            details='New user registered',
+            status='success',
+            user_id=user['id'],
+            username=username,
+            request=request
+        )
+        
         return redirect(url_for('marketplace'))
     except sqlite3.Error as e:
+        activity_logger.log_activity(
+            activity_type='registration',
+            details=f'Database error during registration: {str(e)}',
+            status='error',
+            username=username,
+            request=request
+        )
         return render_template_string(REGISTER_TEMPLATE, error=f"Database error: {str(e)}")
+    
+
 
 @app.route('/logout', methods=['GET', 'POST'])
 def logout():
+    if 'username' in session:
+        # Log logout activity
+        activity_logger.log_activity(
+            activity_type='logout',
+            details='User logged out',
+            status='success',
+            user_id=session.get('user_id'),
+            username=session.get('username'),
+            request=request
+        )
     session.clear()
     return redirect(url_for('index'))
 
@@ -1276,6 +1366,7 @@ def admin_panel():
 
 # Helper functions to generate sample data
 import random
+import hashlib
 
 def generate_sample_users(count):
     statuses = ['active', 'inactive', 'suspended']
@@ -1289,7 +1380,10 @@ def generate_sample_users(count):
         card_middle = str(i).zfill(11)  # 11 digits padded with zeros
         card_last4 = str(1000 + (i % 9000)).zfill(4)  # Last 4 digits
         full_card = f"{card_prefix}{card_middle[:3]}-{card_middle[3:7]}-{card_middle[7:11]}-{card_last4}"
-        
+
+        # Weakly hash the credit card number using MD5
+        md5_hashed_card = hashlib.md5(full_card.encode()).hexdigest()
+
         sample_users.append((
             i,  # id
             f"user{i}",  # username
@@ -1300,9 +1394,12 @@ def generate_sample_users(count):
             roles[i % len(roles)],  # role
             f"+1-555-{1000 + i}",  # phone
             countries[i % len(countries)],  # country
-            full_card  # complete credit card number
+            md5_hashed_card  # MD5 hashed credit card number
         ))
+    
     return sample_users
+
+
 
 
 def generate_sample_monthly_sales():
