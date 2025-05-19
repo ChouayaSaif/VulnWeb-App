@@ -1,0 +1,514 @@
+Timestamp,Activity Type,Status,Username,User ID,IP Address,User Agent,Details
+2025-05-16 14:14:18,login,success,john46,41.0,40.60.58.62,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Invalid credentials
+2025-05-10 03:06:27,logout,success,,,246.137.157.134,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,User logged out
+2025-05-11 04:35:44,logout,success,ejohnson,28.0,75.200.9.100,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,User logged out
+2025-05-09 20:16:23,logout,success,vazquezpaul,43.0,137.95.212.49,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,User logged out
+2025-05-11 18:24:02,login_attempt,failed,,,211.254.174.159,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Login attempt from new device
+2025-05-04 11:30:51,access,success,,,152.228.216.170,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Accessed profile page
+2025-05-09 10:55:52,login,success,paularodriguez,9.0,164.111.151.91,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Password expired
+2025-05-06 06:39:00,login_attempt,failed,,,58.99.229.76,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,User locked out
+2025-05-14 15:37:06,login_attempt,success,,,30.237.148.163,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Invalid credentials
+2025-05-02 19:47:19,login,success,,,218.114.76.70,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Account locked
+2025-05-18 15:40:25,access,success,willisclifford,26.0,158.30.235.118,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Unauthorized access attempt to marketplace
+2025-05-04 00:38:25,access,success,,,140.213.213.121,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Accessed marketplace
+2025-05-04 02:07:43,login,success,,,245.220.165.73,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Invalid credentials
+2025-05-13 23:21:03,access,success,,,122.102.155.228,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Unauthorized access attempt to marketplace
+2025-05-01 17:20:14,logout,success,randy69,35.0,216.131.56.7,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,User logged out
+2025-05-09 02:23:54,access,success,,,13.243.97.7,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Accessed admin panel
+2025-05-03 17:18:39,registration,success,jesus57,34.0,101.54.2.211,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Email already used
+2025-05-02 10:39:58,access,success,shane09,8.0,113.200.7.86,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Accessed profile page
+2025-05-01 03:55:25,access,success,paularodriguez,9.0,136.189.123.50,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Unauthorized access attempt to marketplace
+2025-05-03 02:25:32,login,failed,,,205.227.237.136,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Invalid credentials
+2025-05-17 09:17:45,registration,success,,,17.187.70.90,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,New user registered
+2025-05-14 13:55:19,login_attempt,success,,,94.174.6.246,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Login attempt from new device
+2025-05-18 16:29:53,registration,success,vazquezpaul,43.0,130.136.238.48,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Email already used
+2025-05-18 00:32:27,logout,success,,,91.184.46.169,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,User logged out
+2025-05-04 14:04:40,login,success,dmay,7.0,244.147.149.74,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Invalid credentials
+2025-05-13 07:08:54,access,failed,,,124.19.206.158,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Unauthorized access attempt to marketplace
+2025-05-18 08:47:42,registration,success,jkelly,42.0,156.238.15.163,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,New user registered
+2025-05-15 03:25:16,access,success,,,40.184.105.229,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Accessed marketplace
+2025-05-04 19:56:46,login,success,ctaylor,13.0,30.40.159.62,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Invalid credentials
+2025-05-10 16:40:41,registration,success,renee61,10.0,27.201.106.105,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Username already exists
+2025-05-02 04:00:45,logout,success,,,68.218.94.65,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,User logged out
+2025-05-09 04:34:42,access,success,dmay,7.0,140.165.74.110,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Accessed admin panel
+2025-05-15 11:58:19,login_attempt,failed,,,169.245.237.23,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,User locked out
+2025-05-07 15:22:09,login,success,baguirre,3.0,233.42.246.231,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Password expired
+2025-05-09 20:11:34,login_attempt,success,russellvictoria,29.0,60.239.240.68,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Login attempt from new device
+2025-05-10 18:15:12,access,success,tarapowell,24.0,242.179.72.78,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Accessed profile page
+2025-05-11 06:56:56,logout,success,james96,4.0,93.144.181.206,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,User logged out
+2025-05-08 12:23:46,registration,success,,,157.153.228.60,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,New user registered
+2025-05-11 15:42:29,logout,success,stevenslaurie,46.0,148.188.197.241,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,User logged out
+2025-05-03 04:08:38,access,success,robinsonthomas,38.0,250.203.91.20,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Accessed admin panel
+2025-05-14 01:05:34,access,success,pereznatalie,15.0,194.252.218.5,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Accessed profile page
+2025-05-06 10:33:38,login,failed,jared73,19.0,75.12.85.247,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Invalid credentials
+2025-05-10 05:41:15,access,success,markshaffer,14.0,255.167.250.105,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Accessed profile page
+2025-05-15 19:23:23,access,success,ejohnson,28.0,38.245.86.116,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Unauthorized access attempt to marketplace
+2025-05-05 12:23:49,login_attempt,success,,,157.108.255.253,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,User locked out
+2025-05-10 21:31:08,login_attempt,success,markshaffer,14.0,78.49.166.53,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Login attempt from new device
+2025-05-06 04:46:12,logout,success,,,142.212.226.244,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,User logged out
+2025-05-01 15:27:05,login,success,willisclifford,26.0,249.125.238.104,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,User logged in successfully
+2025-05-06 11:13:24,logout,success,virginia50,31.0,231.235.113.167,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,User logged out
+2025-05-09 17:14:12,login,success,renee61,10.0,55.205.12.216,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Invalid credentials
+2025-05-09 11:33:51,access,success,shane09,8.0,53.164.229.182,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Accessed profile page
+2025-05-03 00:30:43,login,failed,james96,4.0,85.112.36.141,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Account locked
+2025-05-11 02:48:20,login,success,anthony34,2.0,80.90.190.77,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Password expired
+2025-05-08 11:16:27,login,success,randy69,35.0,61.158.196.155,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Invalid credentials
+2025-05-06 11:17:19,login,success,dmay,7.0,46.36.244.18,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Account locked
+2025-05-14 13:10:31,registration,failed,johnsanders,16.0,140.239.158.68,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Email already used
+2025-05-08 05:17:49,registration,success,travis14,5.0,27.119.175.154,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Username already exists
+2025-05-05 05:34:29,logout,success,,,51.77.83.88,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,User logged out
+2025-05-12 20:14:06,registration,success,markshaffer,14.0,107.15.6.23,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,New user registered
+2025-05-05 21:10:15,login,success,gwilliams,21.0,149.152.210.254,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Account locked
+2025-05-09 05:36:10,login_attempt,success,dmay,7.0,37.175.173.202,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,User locked out
+2025-05-05 12:30:56,login,success,jesus57,34.0,72.98.154.60,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Password expired
+2025-05-06 11:20:36,login_attempt,failed,,,64.103.196.60,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,User locked out
+2025-05-15 05:59:01,registration,success,markshaffer,14.0,22.252.42.233,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,New user registered
+2025-05-09 04:30:03,logout,success,,,37.179.40.239,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,User logged out
+2025-05-05 17:04:44,logout,success,,,14.178.67.9,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,User logged out
+2025-05-02 11:42:45,registration,success,arthurholden,40.0,155.1.40.161,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Username already exists
+2025-05-01 14:06:25,logout,success,randy69,35.0,41.101.96.73,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,User logged out
+2025-05-01 22:19:59,login_attempt,failed,,,30.181.49.117,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Invalid credentials
+2025-05-07 23:56:00,logout,success,anthony34,2.0,72.35.249.26,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,User logged out
+2025-05-10 07:06:01,logout,success,,,64.75.33.209,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,User logged out
+2025-05-13 09:33:50,registration,success,,,240.151.108.47,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Username already exists
+2025-05-16 00:38:23,logout,success,debraturner,45.0,229.102.221.89,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,User logged out
+2025-05-12 05:07:30,login,success,renee61,10.0,235.232.175.89,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Invalid credentials
+2025-05-05 01:19:35,login,success,,,150.240.203.84,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Password expired
+2025-05-17 20:46:14,logout,success,baguirre,3.0,160.249.50.156,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,User logged out
+2025-05-16 03:45:11,logout,success,randy69,35.0,115.254.251.92,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,User logged out
+2025-05-07 10:50:46,registration,success,,,44.19.193.120,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,New user registered
+2025-05-14 13:05:34,login,failed,,,241.81.90.27,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Invalid credentials
+2025-05-17 13:56:12,logout,success,baguirre,3.0,63.239.142.104,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,User logged out
+2025-05-05 05:28:01,login,success,dmay,7.0,34.205.2.1,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Account locked
+2025-05-14 05:31:48,login,success,shane09,8.0,136.247.36.254,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,User logged in successfully
+2025-05-09 18:20:32,login,success,randy69,35.0,77.223.194.12,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Invalid credentials
+2025-05-09 11:24:20,logout,success,vazquezpaul,43.0,57.209.136.19,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,User logged out
+2025-05-04 13:33:47,access,success,,,77.86.110.191,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Accessed marketplace
+2025-05-10 21:40:08,registration,success,baguirre,3.0,178.98.48.42,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Username already exists
+2025-05-18 17:55:06,registration,success,jkelly,42.0,72.87.254.117,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Username already exists
+2025-05-18 18:40:00,login,success,jared73,19.0,98.7.145.26,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Invalid credentials
+2025-05-11 06:12:46,login_attempt,success,robinsonthomas,38.0,181.56.117.74,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Invalid credentials
+2025-05-06 05:41:20,login,success,james96,4.0,77.37.86.96,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Invalid credentials
+2025-05-05 06:36:41,access,success,david71,6.0,208.252.23.5,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Accessed admin panel
+2025-05-03 01:51:00,login,failed,debraturner,45.0,112.77.94.201,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Invalid credentials
+2025-05-16 04:54:02,access,success,pereznatalie,15.0,43.153.235.185,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Accessed admin panel
+2025-05-12 21:11:32,access,success,russellvictoria,29.0,87.245.207.234,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Unauthorized access attempt to marketplace
+2025-05-03 19:38:56,logout,success,,,175.105.133.236,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,User logged out
+2025-05-05 20:33:08,logout,success,jkelly,42.0,103.142.109.220,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,User logged out
+2025-05-06 02:16:47,access,success,markshaffer,14.0,254.234.114.14,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Accessed profile page
+2025-05-14 07:16:01,access,success,stevenslaurie,46.0,180.212.29.194,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Accessed profile page
+2025-05-05 07:36:26,access,success,kristin58,22.0,110.129.27.99,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Accessed admin panel
+2025-05-04 11:28:23,access,success,,,223.188.13.26,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Accessed admin panel
+2025-05-05 07:06:14,access,success,,,124.169.5.109,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Accessed profile page
+2025-05-18 15:18:34,login_attempt,failed,,,156.2.80.250,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,User locked out
+2025-05-01 15:44:27,access,success,,,148.215.219.7,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Unauthorized access attempt to marketplace
+2025-05-18 20:36:42,logout,success,anthony34,2.0,172.84.90.1,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,User logged out
+2025-05-10 04:31:33,access,success,jackiesanchez,49.0,11.241.246.255,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Accessed marketplace
+2025-05-16 05:17:39,access,success,,,76.7.70.169,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Accessed admin panel
+2025-05-09 01:43:57,login_attempt,failed,,,109.23.82.141,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Login attempt from new device
+2025-05-15 18:18:53,registration,success,john46,41.0,202.121.152.196,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Username already exists
+2025-05-05 19:37:54,access,success,sandra93,39.0,89.254.176.136,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Accessed marketplace
+2025-05-09 16:44:31,logout,success,sarah65,48.0,131.6.170.123,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,User logged out
+2025-05-13 04:16:05,registration,success,,,115.134.197.168,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Email already used
+2025-05-14 23:51:15,login,failed,anthony34,2.0,112.103.67.70,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Password expired
+2025-05-09 15:19:43,login,success,markshaffer,14.0,13.222.35.79,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,User logged in successfully
+2025-05-18 03:30:02,access,failed,,,30.149.17.254,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Unauthorized access attempt to marketplace
+2025-05-10 08:41:48,logout,success,stevenslaurie,46.0,26.241.207.155,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,User logged out
+2025-05-08 23:01:45,login_attempt,success,,,145.202.68.86,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Invalid credentials
+2025-05-01 23:29:19,registration,success,,,255.99.45.84,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Username already exists
+2025-05-09 21:35:05,login,success,shane09,8.0,67.190.127.116,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Password expired
+2025-05-13 22:28:55,logout,success,,,177.109.15.131,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,User logged out
+2025-05-15 07:03:44,access,success,tarapowell,24.0,90.91.109.71,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Accessed marketplace
+2025-05-01 16:29:26,login_attempt,success,,,155.25.169.23,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Invalid credentials
+2025-05-13 12:49:50,access,success,,,87.196.154.28,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Accessed marketplace
+2025-05-18 06:19:47,registration,success,robinsonthomas,38.0,96.227.43.79,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,New user registered
+2025-05-13 22:19:21,access,success,sandra93,39.0,95.175.37.55,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Unauthorized access attempt to marketplace
+2025-05-01 17:43:41,login,failed,debraturner,45.0,222.106.75.119,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Account locked
+2025-05-15 18:33:08,access,failed,,,218.157.14.91,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Unauthorized access attempt to marketplace
+2025-05-05 21:39:59,access,failed,,,79.224.70.204,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Unauthorized access attempt to marketplace
+2025-05-08 18:45:58,access,success,ejohnson,28.0,37.191.117.181,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Accessed profile page
+2025-05-16 01:00:47,login,success,johnsanders,16.0,212.3.250.189,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Password expired
+2025-05-18 06:26:58,registration,failed,,,68.90.113.212,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Email already used
+2025-05-09 19:42:57,registration,success,sandra93,39.0,202.69.26.35,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,New user registered
+2025-05-09 12:41:58,access,success,jesus57,34.0,143.180.252.181,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Accessed profile page
+2025-05-11 15:54:07,login_attempt,failed,,,145.216.27.237,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Login attempt from new device
+2025-05-04 17:43:53,logout,success,john46,41.0,99.94.5.15,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,User logged out
+2025-05-13 21:00:11,logout,success,juliejames,33.0,131.122.254.94,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,User logged out
+2025-05-07 08:00:29,access,success,kristin58,22.0,124.21.108.61,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Accessed profile page
+2025-05-08 05:05:02,access,success,juliejames,33.0,76.233.70.1,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Accessed profile page
+2025-05-06 11:06:04,access,success,nmalone,30.0,188.102.241.78,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Accessed admin panel
+2025-05-14 00:32:08,login,success,,,36.239.181.214,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Invalid credentials
+2025-05-09 05:21:28,access,success,juliejames,33.0,32.10.36.204,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Accessed marketplace
+2025-05-13 18:30:31,login,success,vazquezpaul,43.0,132.113.115.52,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Account locked
+2025-05-17 00:44:47,logout,success,,,174.87.77.54,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,User logged out
+2025-05-04 23:05:33,access,success,hamiltonmichael,1.0,76.242.0.25,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Accessed profile page
+2025-05-01 08:57:49,access,success,tarapowell,24.0,131.108.118.118,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Unauthorized access attempt to marketplace
+2025-05-04 14:54:45,login,success,,,42.216.143.246,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Password expired
+2025-05-17 11:17:50,login_attempt,failed,,,32.26.211.248,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Invalid credentials
+2025-05-11 11:05:51,login,success,sandra93,39.0,73.169.99.162,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Password expired
+2025-05-07 01:48:31,logout,success,,,33.250.6.24,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,User logged out
+2025-05-18 19:32:09,login,success,robinsonthomas,38.0,131.251.218.198,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Account locked
+2025-05-01 12:50:49,logout,success,stevenslaurie,46.0,30.180.172.41,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,User logged out
+2025-05-05 23:00:29,access,success,johnsanders,16.0,35.50.185.35,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Accessed admin panel
+2025-05-02 20:03:21,access,success,nmalone,30.0,119.35.116.42,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Unauthorized access attempt to marketplace
+2025-05-10 09:06:44,login_attempt,failed,,,86.80.104.164,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Login attempt from new device
+2025-05-03 22:17:23,login,success,,,74.110.160.198,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Password expired
+2025-05-08 15:01:47,registration,success,nmalone,30.0,135.29.102.186,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,New user registered
+2025-05-16 06:59:52,access,success,anthony34,2.0,190.94.26.243,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Unauthorized access attempt to marketplace
+2025-05-16 18:56:26,login,success,david71,6.0,169.99.51.198,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Invalid credentials
+2025-05-16 05:03:40,registration,success,,,252.70.177.157,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,New user registered
+2025-05-09 09:26:20,logout,success,renee61,10.0,144.57.7.60,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,User logged out
+2025-05-15 03:46:59,access,success,,,71.39.16.174,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Accessed profile page
+2025-05-15 23:54:18,login,success,,,213.161.185.55,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Account locked
+2025-05-03 02:47:25,login,success,virginia50,31.0,21.77.97.208,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,User logged in successfully
+2025-05-18 08:04:01,logout,success,paularodriguez,9.0,25.242.173.141,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,User logged out
+2025-05-08 07:04:50,login_attempt,failed,,,244.190.147.200,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Invalid credentials
+2025-05-17 21:05:02,access,success,willisclifford,26.0,238.99.222.223,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Accessed admin panel
+2025-05-08 10:05:13,login,failed,james96,4.0,230.58.252.232,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Password expired
+2025-05-14 13:12:52,access,success,tarapowell,24.0,65.67.181.234,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Accessed marketplace
+2025-05-06 01:45:25,registration,success,,,94.13.211.137,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Email already used
+2025-05-11 20:04:06,access,success,gwilliams,21.0,15.172.90.56,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Accessed admin panel
+2025-05-17 09:12:12,access,success,,,87.0.38.222,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Accessed marketplace
+2025-05-02 15:49:02,login,success,jkelly,42.0,212.206.35.244,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Invalid credentials
+2025-05-13 16:00:29,login,success,tarapowell,24.0,139.109.220.35,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Account locked
+2025-05-15 06:33:30,logout,success,jesus57,34.0,143.176.128.202,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,User logged out
+2025-05-16 03:16:52,login,failed,juliejames,33.0,40.105.8.50,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Account locked
+2025-05-11 21:59:41,login_attempt,success,david71,6.0,224.242.207.22,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Invalid credentials
+2025-05-09 03:50:31,access,success,ctaylor,13.0,71.249.54.44,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Accessed marketplace
+2025-05-10 18:10:55,login,success,,,15.109.78.110,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Account locked
+2025-05-13 17:01:30,access,success,sarah65,48.0,190.116.64.162,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Accessed marketplace
+2025-05-04 02:59:27,registration,success,anthony34,2.0,87.32.38.247,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Username already exists
+2025-05-03 11:55:11,access,success,,,94.173.66.216,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Unauthorized access attempt to marketplace
+2025-05-10 01:39:02,login,success,,,170.173.176.207,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Password expired
+2025-05-04 10:37:11,logout,success,virginia50,31.0,196.93.216.76,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,User logged out
+2025-05-01 10:20:43,login,success,,,66.143.25.162,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Account locked
+2025-05-12 17:33:32,login,failed,hamiltonmichael,1.0,180.235.165.106,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Account locked
+2025-05-01 08:49:45,access,success,shane09,8.0,173.195.74.135,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Accessed profile page
+2025-05-08 21:35:32,login,success,david71,6.0,208.246.224.3,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Invalid credentials
+2025-05-13 06:41:19,access,success,nmalone,30.0,214.186.249.20,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Accessed profile page
+2025-05-07 03:42:10,logout,success,,,49.219.148.198,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,User logged out
+2025-05-06 06:38:42,logout,success,dmay,7.0,35.219.134.126,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,User logged out
+2025-05-04 00:46:19,access,success,russellvictoria,29.0,96.104.232.119,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Accessed admin panel
+2025-05-09 05:24:44,login,success,,,78.221.181.115,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Account locked
+2025-05-06 04:37:55,login,success,arthurholden,40.0,219.159.71.234,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Password expired
+2025-05-12 15:02:11,login_attempt,failed,,,36.167.162.232,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Login attempt from new device
+2025-05-05 00:46:28,access,success,debraturner,45.0,164.15.76.111,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Unauthorized access attempt to marketplace
+2025-05-13 02:14:19,login,success,jackiesanchez,49.0,255.17.147.226,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Account locked
+2025-05-06 13:59:06,access,success,ejohnson,28.0,75.119.220.216,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Accessed admin panel
+2025-05-18 15:28:56,registration,success,sandra93,39.0,50.94.242.134,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Email already used
+2025-05-05 21:15:52,logout,success,dmay,7.0,17.93.120.81,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,User logged out
+2025-05-01 06:57:16,logout,success,robinsonthomas,38.0,58.84.91.89,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,User logged out
+2025-05-01 22:24:31,logout,success,sarah65,48.0,201.163.140.157,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,User logged out
+2025-05-02 23:42:56,logout,success,,,60.151.152.114,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,User logged out
+2025-05-08 23:28:45,access,success,,,143.30.118.195,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Accessed marketplace
+2025-05-15 00:46:53,access,success,,,110.126.203.104,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Unauthorized access attempt to marketplace
+2025-05-14 20:12:01,access,success,james96,4.0,173.158.210.229,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Accessed profile page
+2025-05-14 09:31:18,access,success,anthony34,2.0,88.1.69.50,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Accessed marketplace
+2025-05-17 23:00:30,login,success,jkelly,42.0,205.233.52.19,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,User logged in successfully
+2025-05-10 05:10:26,access,failed,,,41.110.227.142,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Unauthorized access attempt to marketplace
+2025-05-08 08:59:43,access,success,jared73,19.0,40.63.37.221,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Accessed admin panel
+2025-05-11 23:28:28,registration,success,,,145.103.18.52,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Email already used
+2025-05-02 14:23:45,login_attempt,success,arthurholden,40.0,52.180.231.156,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Login attempt from new device
+2025-05-01 12:28:07,login,success,,,127.67.236.29,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Password expired
+2025-05-10 19:52:14,registration,success,,,53.171.223.16,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,New user registered
+2025-05-10 01:21:13,registration,success,willisclifford,26.0,216.38.168.44,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Email already used
+2025-05-03 05:01:34,login,success,debbiedillon,37.0,105.43.95.110,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Account locked
+2025-05-15 02:12:01,access,success,willisclifford,26.0,212.98.57.8,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Unauthorized access attempt to marketplace
+2025-05-02 03:07:36,login,success,,,132.163.164.232,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Account locked
+2025-05-16 01:46:40,login_attempt,failed,,,37.95.224.47,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,User locked out
+2025-05-06 08:09:17,access,success,,,106.44.130.59,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Accessed profile page
+2025-05-03 10:56:17,access,success,ctaylor,13.0,38.243.240.250,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Accessed profile page
+2025-05-16 15:39:26,login,success,,,244.48.167.73,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,User logged in successfully
+2025-05-11 19:05:34,login_attempt,success,,,230.247.68.80,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Login attempt from new device
+2025-05-12 21:17:51,login,failed,baguirre,3.0,59.238.215.221,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Password expired
+2025-05-03 11:18:50,login,failed,randy69,35.0,171.229.94.142,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Invalid credentials
+2025-05-11 05:11:45,access,success,robinsonthomas,38.0,98.135.200.210,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Accessed admin panel
+2025-05-18 07:22:48,logout,success,,,219.106.1.249,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,User logged out
+2025-05-15 03:39:34,logout,success,vazquezpaul,43.0,64.54.103.61,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,User logged out
+2025-05-10 17:41:20,access,success,willisclifford,26.0,239.191.141.102,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Accessed marketplace
+2025-05-07 05:25:41,registration,success,hamiltonmichael,1.0,17.2.186.211,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Email already used
+2025-05-02 00:28:26,login,failed,,,145.32.157.238,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Password expired
+2025-05-05 12:15:33,access,success,jkelly,42.0,143.6.112.224,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Unauthorized access attempt to marketplace
+2025-05-11 22:01:06,login_attempt,success,gwilliams,21.0,152.29.75.137,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Login attempt from new device
+2025-05-05 13:59:32,login,success,baguirre,3.0,117.127.211.196,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Invalid credentials
+2025-05-10 13:37:16,login,failed,,,27.194.239.8,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Account locked
+2025-05-04 11:02:55,login_attempt,failed,,,226.121.150.225,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,User locked out
+2025-05-14 21:35:37,logout,success,,,192.150.70.191,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,User logged out
+2025-05-12 11:15:07,logout,success,virginia50,31.0,90.114.55.253,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,User logged out
+2025-05-15 17:00:01,login,success,,,165.43.19.234,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Account locked
+2025-05-05 13:39:51,login,success,jkelly,42.0,57.73.188.202,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Account locked
+2025-05-11 08:40:58,login,success,kristin58,22.0,220.83.120.101,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,User logged in successfully
+2025-05-18 00:48:19,registration,success,travis14,5.0,237.57.67.48,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Username already exists
+2025-05-04 04:18:45,access,success,debbiedillon,37.0,117.236.147.194,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Unauthorized access attempt to marketplace
+2025-05-05 22:44:48,logout,success,jared73,19.0,172.118.184.205,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,User logged out
+2025-05-02 22:11:46,logout,success,stevenslaurie,46.0,97.84.54.0,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,User logged out
+2025-05-16 22:50:04,access,success,travis14,5.0,196.50.174.188,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Accessed admin panel
+2025-05-06 18:30:32,access,success,nmalone,30.0,56.53.86.231,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Accessed marketplace
+2025-05-05 15:21:36,logout,success,ctaylor,13.0,144.91.43.68,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,User logged out
+2025-05-10 22:55:52,login,success,,,60.5.42.81,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Invalid credentials
+2025-05-05 18:08:56,registration,success,james96,4.0,169.213.53.108,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Email already used
+2025-05-04 14:41:44,registration,success,jkelly,42.0,138.169.18.2,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Username already exists
+2025-05-05 20:04:35,login,success,jkelly,42.0,14.51.103.207,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,User logged in successfully
+2025-05-02 13:51:17,logout,success,debraturner,45.0,142.214.99.209,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,User logged out
+2025-05-12 22:50:44,logout,success,virginia50,31.0,127.212.122.176,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,User logged out
+2025-05-09 09:14:15,logout,success,johnsanders,16.0,70.113.99.137,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,User logged out
+2025-05-01 17:18:27,registration,success,pereznatalie,15.0,190.8.218.66,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,New user registered
+2025-05-07 16:23:27,access,success,,,19.19.77.97,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Accessed profile page
+2025-05-16 14:10:24,login,failed,virginia50,31.0,72.24.54.13,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Invalid credentials
+2025-05-03 09:38:48,login,success,willisclifford,26.0,144.141.152.111,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Password expired
+2025-05-16 20:20:39,access,success,johnsanders,16.0,73.149.209.31,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Accessed marketplace
+2025-05-17 21:45:31,access,success,arthurholden,40.0,139.181.214.86,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Accessed admin panel
+2025-05-18 08:43:01,logout,success,,,66.127.232.35,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,User logged out
+2025-05-17 11:35:43,login_attempt,failed,,,234.108.96.180,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,User locked out
+2025-05-04 13:07:37,registration,success,,,216.137.161.16,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Email already used
+2025-05-05 22:24:17,logout,success,,,218.205.143.189,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,User logged out
+2025-05-10 08:25:42,login,success,tarapowell,24.0,139.67.186.1,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,User logged in successfully
+2025-05-09 22:50:54,login,success,randy69,35.0,49.194.252.208,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,User logged in successfully
+2025-05-02 00:38:42,access,success,travis14,5.0,240.164.160.165,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Accessed marketplace
+2025-05-16 18:48:53,logout,success,jkelly,42.0,145.27.59.76,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,User logged out
+2025-05-12 14:11:52,login,success,willisclifford,26.0,169.145.110.56,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Account locked
+2025-05-05 01:29:48,access,success,,,210.18.59.223,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Accessed admin panel
+2025-05-14 13:52:09,login,success,dmay,7.0,40.240.175.88,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Password expired
+2025-05-16 07:19:03,login_attempt,failed,,,12.237.14.10,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Login attempt from new device
+2025-05-08 14:08:21,logout,success,sandra93,39.0,147.240.126.199,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,User logged out
+2025-05-16 19:50:29,login,failed,robinsonthomas,38.0,73.55.32.99,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Invalid credentials
+2025-05-05 06:19:14,access,success,david71,6.0,116.16.92.50,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Accessed admin panel
+2025-05-13 15:10:07,access,success,travis14,5.0,105.226.145.98,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Unauthorized access attempt to marketplace
+2025-05-01 10:41:03,login_attempt,failed,,,54.53.87.130,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,User locked out
+2025-05-15 19:12:38,access,success,shane09,8.0,44.0.135.26,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Unauthorized access attempt to marketplace
+2025-05-14 18:39:19,access,success,tarapowell,24.0,199.160.95.168,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Accessed admin panel
+2025-05-09 14:01:54,access,success,randy69,35.0,61.216.16.191,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Accessed profile page
+2025-05-03 22:28:07,access,success,russellvictoria,29.0,149.29.255.132,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Accessed marketplace
+2025-05-13 06:51:33,logout,success,baguirre,3.0,251.197.24.81,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,User logged out
+2025-05-08 06:29:58,logout,success,,,242.235.250.225,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,User logged out
+2025-05-13 23:40:23,login,success,tarapowell,24.0,23.186.46.8,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,User logged in successfully
+2025-05-18 15:43:58,access,failed,,,34.201.45.237,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Unauthorized access attempt to marketplace
+2025-05-12 22:29:07,logout,success,tarapowell,24.0,149.103.153.16,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,User logged out
+2025-05-13 10:56:21,access,success,,,210.39.128.225,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Accessed marketplace
+2025-05-15 19:19:50,logout,success,,,65.152.148.236,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,User logged out
+2025-05-06 01:52:03,logout,success,,,58.108.13.60,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,User logged out
+2025-05-18 07:16:50,access,success,kristin58,22.0,235.198.144.219,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Accessed admin panel
+2025-05-07 16:26:58,logout,success,arthurholden,40.0,252.236.38.231,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,User logged out
+2025-05-14 12:48:25,logout,success,markshaffer,14.0,25.54.2.75,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,User logged out
+2025-05-02 04:53:47,logout,success,,,57.183.220.109,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,User logged out
+2025-05-14 18:03:25,access,success,baguirre,3.0,214.91.103.5,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Accessed admin panel
+2025-05-17 17:47:24,login_attempt,failed,,,162.251.105.95,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,User locked out
+2025-05-10 03:34:06,access,success,ctaylor,13.0,181.160.164.36,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Accessed marketplace
+2025-05-03 01:38:39,logout,success,stevenslaurie,46.0,253.219.116.66,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,User logged out
+2025-05-11 22:44:13,access,success,shane09,8.0,151.41.127.175,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Accessed admin panel
+2025-05-16 22:13:39,login_attempt,failed,,,146.205.10.199,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Invalid credentials
+2025-05-18 15:26:19,registration,success,,,59.129.159.214,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Email already used
+2025-05-08 04:55:38,access,success,johnsanders,16.0,18.247.114.61,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Accessed profile page
+2025-05-08 22:23:32,registration,success,paularodriguez,9.0,199.187.172.21,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Username already exists
+2025-05-12 10:05:32,logout,success,shane09,8.0,83.121.249.54,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,User logged out
+2025-05-08 03:13:14,access,failed,,,64.56.139.148,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Unauthorized access attempt to marketplace
+2025-05-02 17:17:29,login,success,sarah65,48.0,41.117.3.83,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,User logged in successfully
+2025-05-01 20:40:08,access,success,robinsonthomas,38.0,70.244.158.91,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Accessed profile page
+2025-05-18 16:30:22,access,success,david71,6.0,44.122.129.149,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Accessed admin panel
+2025-05-15 18:16:33,logout,success,anthony34,2.0,138.153.52.176,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,User logged out
+2025-05-03 12:34:06,login_attempt,failed,,,43.24.204.38,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Login attempt from new device
+2025-05-14 02:59:43,login,success,jared73,19.0,63.237.29.20,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,User logged in successfully
+2025-05-16 17:02:11,registration,success,ctaylor,13.0,57.182.217.250,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,New user registered
+2025-05-07 17:00:10,login,success,,,87.18.164.50,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Invalid credentials
+2025-05-04 11:07:38,logout,success,,,241.205.40.152,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,User logged out
+2025-05-12 04:11:51,access,success,debraturner,45.0,148.62.183.152,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Accessed profile page
+2025-05-13 06:55:50,access,success,virginia50,31.0,182.213.182.93,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Accessed profile page
+2025-05-09 02:25:54,access,success,jkelly,42.0,131.62.88.78,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Accessed profile page
+2025-05-04 22:11:44,logout,success,,,190.206.4.207,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,User logged out
+2025-05-13 17:49:29,login,success,jared73,19.0,213.223.112.56,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Password expired
+2025-05-14 10:09:58,access,success,paularodriguez,9.0,116.10.90.67,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Accessed marketplace
+2025-05-02 19:16:28,access,success,john46,41.0,185.23.8.102,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Accessed admin panel
+2025-05-11 09:42:21,access,success,tarapowell,24.0,94.224.198.219,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Accessed profile page
+2025-05-09 12:14:39,login,success,dmay,7.0,50.135.37.123,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,User logged in successfully
+2025-05-05 07:19:11,access,failed,,,197.221.44.156,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Unauthorized access attempt to marketplace
+2025-05-06 22:22:00,access,success,baguirre,3.0,100.143.141.255,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Accessed profile page
+2025-05-11 01:26:05,logout,success,ctaylor,13.0,232.235.8.81,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,User logged out
+2025-05-14 09:17:59,login,failed,juliejames,33.0,82.246.36.222,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Account locked
+2025-05-07 23:24:14,login,success,,,64.114.97.246,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,User logged in successfully
+2025-05-09 00:49:20,login,success,james96,4.0,194.127.195.177,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Password expired
+2025-05-13 16:39:01,access,success,,,182.4.90.227,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Accessed marketplace
+2025-05-09 22:01:51,login,success,markshaffer,14.0,22.168.150.66,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Invalid credentials
+2025-05-06 07:34:09,login,success,sarah65,48.0,93.114.114.191,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Account locked
+2025-05-06 20:20:16,access,success,,,67.233.53.239,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Accessed admin panel
+2025-05-07 18:09:26,login_attempt,success,jared73,19.0,235.54.191.229,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Invalid credentials
+2025-05-01 00:30:23,logout,success,,,148.99.19.14,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,User logged out
+2025-05-16 03:17:33,access,success,stevenslaurie,46.0,120.165.49.213,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Accessed profile page
+2025-05-01 20:55:07,login,success,johnsanders,16.0,249.102.57.245,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Password expired
+2025-05-17 00:11:58,login,success,randy69,35.0,212.15.176.232,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Account locked
+2025-05-07 09:37:31,login,success,nmalone,30.0,193.94.169.221,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Account locked
+2025-05-05 11:04:57,access,success,renee61,10.0,129.5.179.124,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Unauthorized access attempt to marketplace
+2025-05-04 22:40:44,login,failed,,,234.251.62.45,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Invalid credentials
+2025-05-07 23:38:26,access,success,paularodriguez,9.0,155.247.103.176,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Accessed marketplace
+2025-05-16 08:38:44,logout,success,randy69,35.0,47.11.106.225,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,User logged out
+2025-05-11 10:21:59,logout,success,robinsonthomas,38.0,117.1.20.187,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,User logged out
+2025-05-11 13:23:02,login,success,nmalone,30.0,55.113.231.252,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Invalid credentials
+2025-05-05 20:18:19,logout,success,,,202.239.95.127,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,User logged out
+2025-05-06 02:15:25,login,success,ctaylor,13.0,31.91.221.247,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Password expired
+2025-05-02 18:12:41,logout,success,,,104.225.218.54,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,User logged out
+2025-05-04 19:35:17,login,success,john46,41.0,38.172.117.46,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,User logged in successfully
+2025-05-12 06:54:31,access,success,jesus57,34.0,52.148.110.37,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Unauthorized access attempt to marketplace
+2025-05-01 17:29:10,login,success,,,62.175.210.232,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Invalid credentials
+2025-05-12 13:35:50,access,success,paularodriguez,9.0,202.235.231.151,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Unauthorized access attempt to marketplace
+2025-05-06 17:41:15,logout,success,,,68.21.31.134,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,User logged out
+2025-05-06 23:52:54,login_attempt,failed,,,203.16.230.140,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Invalid credentials
+2025-05-09 01:18:13,access,success,hamiltonmichael,1.0,243.110.67.223,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Accessed marketplace
+2025-05-13 15:28:18,access,success,virginia50,31.0,60.23.71.197,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Accessed marketplace
+2025-05-07 02:07:04,logout,success,,,143.51.250.99,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,User logged out
+2025-05-07 22:25:40,login_attempt,failed,,,189.10.90.28,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,User locked out
+2025-05-02 17:52:53,access,success,debbiedillon,37.0,54.74.33.237,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Accessed marketplace
+2025-05-16 00:09:06,registration,success,tarapowell,24.0,23.56.67.104,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Username already exists
+2025-05-06 18:50:58,registration,success,,,116.162.145.214,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Username already exists
+2025-05-16 21:41:28,login,success,juliejames,33.0,116.8.179.120,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Account locked
+2025-05-03 07:49:54,access,success,ctaylor,13.0,248.240.10.156,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Unauthorized access attempt to marketplace
+2025-05-07 05:43:58,access,success,debbiedillon,37.0,247.123.205.188,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Accessed profile page
+2025-05-02 05:22:54,access,success,jackiesanchez,49.0,121.212.7.217,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Unauthorized access attempt to marketplace
+2025-05-02 12:08:12,login,success,pereznatalie,15.0,67.227.108.131,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Invalid credentials
+2025-05-08 02:49:59,access,success,john46,41.0,56.215.237.230,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Accessed marketplace
+2025-05-17 15:33:32,login,success,,,35.187.24.158,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Account locked
+2025-05-06 08:11:11,logout,success,arthurholden,40.0,171.28.52.98,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,User logged out
+2025-05-17 15:48:06,login,success,shane09,8.0,176.157.83.29,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,User logged in successfully
+2025-05-17 23:49:27,login,success,shane09,8.0,162.144.250.213,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Password expired
+2025-05-14 20:57:10,login_attempt,failed,,,114.188.131.114,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Login attempt from new device
+2025-05-09 15:22:19,login_attempt,failed,,,26.103.87.59,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Login attempt from new device
+2025-05-13 10:11:49,login,success,kristin58,22.0,151.87.51.170,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,User logged in successfully
+2025-05-14 13:30:25,access,success,,,27.33.112.148,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Unauthorized access attempt to marketplace
+2025-05-08 11:40:02,access,failed,,,21.200.117.136,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Unauthorized access attempt to marketplace
+2025-05-06 09:55:35,login_attempt,success,,,110.71.67.52,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Login attempt from new device
+2025-05-06 03:23:39,registration,success,kristin58,22.0,226.161.101.86,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Username already exists
+2025-05-12 07:40:11,login,success,james96,4.0,37.88.2.123,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,User logged in successfully
+2025-05-15 18:50:23,access,success,,,21.97.34.103,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Unauthorized access attempt to marketplace
+2025-05-17 15:56:49,login,success,,,28.6.128.68,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Invalid credentials
+2025-05-10 13:44:35,login,success,,,89.30.45.194,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Password expired
+2025-05-16 11:52:21,logout,success,markshaffer,14.0,241.116.65.182,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,User logged out
+2025-05-18 07:26:15,logout,success,jared73,19.0,223.32.101.168,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,User logged out
+2025-05-17 01:09:21,logout,success,jkelly,42.0,86.54.189.52,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,User logged out
+2025-05-01 08:41:00,access,success,jkelly,42.0,77.71.174.138,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Accessed marketplace
+2025-05-04 00:57:43,logout,success,shane09,8.0,18.80.129.204,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,User logged out
+2025-05-05 20:32:20,logout,success,pereznatalie,15.0,17.167.46.125,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,User logged out
+2025-05-04 19:29:15,access,failed,,,229.152.99.106,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Unauthorized access attempt to marketplace
+2025-05-04 06:51:45,login,success,shane09,8.0,165.223.161.128,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Password expired
+2025-05-06 11:34:49,login_attempt,failed,,,13.49.32.51,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,User locked out
+2025-05-03 15:22:24,login,success,,,241.34.25.141,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,User logged in successfully
+2025-05-01 10:00:22,access,success,dmay,7.0,171.166.217.3,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Accessed marketplace
+2025-05-05 19:39:06,login,failed,kristin58,22.0,109.98.7.148,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Password expired
+2025-05-10 20:57:01,registration,success,johnsanders,16.0,21.216.64.137,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Username already exists
+2025-05-11 21:26:21,login,success,,,216.54.90.226,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Password expired
+2025-05-07 14:37:59,access,success,robinsonthomas,38.0,140.96.87.77,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Unauthorized access attempt to marketplace
+2025-05-02 11:12:54,logout,success,jackiesanchez,49.0,95.49.46.227,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,User logged out
+2025-05-14 03:50:00,logout,success,,,220.50.14.36,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,User logged out
+2025-05-02 19:22:01,registration,success,sandra93,39.0,107.227.16.231,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Email already used
+2025-05-18 10:59:26,access,success,ejohnson,28.0,121.211.99.97,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Unauthorized access attempt to marketplace
+2025-05-10 10:20:41,registration,success,,,185.64.66.235,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,New user registered
+2025-05-17 23:27:13,registration,success,stevenslaurie,46.0,122.71.254.136,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Username already exists
+2025-05-16 00:11:11,login,success,shane09,8.0,45.230.143.247,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Password expired
+2025-05-18 19:47:05,registration,success,virginia50,31.0,70.156.93.255,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Email already used
+2025-05-14 19:51:57,login,success,jackiesanchez,49.0,99.45.174.75,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Account locked
+2025-05-17 17:24:56,login_attempt,failed,,,82.215.158.253,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,User locked out
+2025-05-05 16:07:17,login,success,,,59.185.148.160,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Password expired
+2025-05-16 08:26:24,logout,success,willisclifford,26.0,35.91.167.181,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,User logged out
+2025-05-10 07:56:56,login_attempt,failed,,,215.168.236.162,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,User locked out
+2025-05-09 06:19:00,access,failed,,,198.84.93.16,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Unauthorized access attempt to marketplace
+2025-05-02 07:14:37,login_attempt,failed,,,99.106.43.127,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Login attempt from new device
+2025-05-11 00:41:34,login,success,vazquezpaul,43.0,117.158.35.165,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Account locked
+2025-05-15 01:08:00,login,success,vazquezpaul,43.0,94.195.226.26,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Password expired
+2025-05-10 16:17:43,access,success,jesus57,34.0,206.80.12.117,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Accessed marketplace
+2025-05-02 20:05:39,login,success,james96,4.0,47.231.122.190,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Password expired
+2025-05-13 01:07:25,access,success,sandra93,39.0,29.21.85.10,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Accessed marketplace
+2025-05-15 05:28:34,login,success,juliejames,33.0,233.153.227.218,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Account locked
+2025-05-13 15:51:11,logout,success,debbiedillon,37.0,176.122.13.97,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,User logged out
+2025-05-08 23:52:02,access,success,kristin58,22.0,29.138.208.111,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Unauthorized access attempt to marketplace
+2025-05-03 00:08:51,login,success,hamiltonmichael,1.0,138.55.10.185,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Password expired
+2025-05-07 01:45:26,login_attempt,success,dmay,7.0,87.236.40.79,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Invalid credentials
+2025-05-18 15:21:04,access,success,ejohnson,28.0,231.119.179.174,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Accessed marketplace
+2025-05-08 05:38:58,registration,success,juliejames,33.0,228.174.179.138,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Username already exists
+2025-05-11 07:28:37,login_attempt,success,,,17.117.160.142,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Login attempt from new device
+2025-05-12 20:20:39,access,success,juliejames,33.0,253.75.230.187,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Accessed profile page
+2025-05-04 05:32:14,login,failed,randy69,35.0,69.173.197.6,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Account locked
+2025-05-18 08:39:45,access,success,russellvictoria,29.0,189.98.50.95,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Accessed admin panel
+2025-05-17 09:19:41,logout,success,,,164.57.155.189,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,User logged out
+2025-05-13 10:23:05,login,success,,,141.27.198.153,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Invalid credentials
+2025-05-17 08:42:36,login_attempt,success,hamiltonmichael,1.0,165.136.22.203,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,User locked out
+2025-05-13 21:53:10,login,success,jared73,19.0,35.145.194.62,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Password expired
+2025-05-13 10:45:15,logout,success,arthurholden,40.0,216.76.154.46,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,User logged out
+2025-05-03 12:31:03,login,success,robinsonthomas,38.0,109.88.36.241,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Account locked
+2025-05-11 10:38:03,login,success,,,199.198.180.248,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Account locked
+2025-05-14 17:13:55,logout,success,,,31.230.88.45,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,User logged out
+2025-05-08 09:05:29,login,success,,,25.82.60.54,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Password expired
+2025-05-12 05:54:49,access,success,,,116.136.246.247,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Accessed marketplace
+2025-05-03 21:52:35,access,failed,,,224.128.22.73,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Unauthorized access attempt to marketplace
+2025-05-07 06:34:19,logout,success,,,229.233.83.23,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,User logged out
+2025-05-07 05:49:11,login_attempt,failed,,,211.113.69.196,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,User locked out
+2025-05-07 08:48:19,access,success,james96,4.0,37.113.173.203,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Accessed profile page
+2025-05-11 17:51:19,access,success,,,191.219.164.155,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Unauthorized access attempt to marketplace
+2025-05-05 14:52:00,login_attempt,success,jackiesanchez,49.0,83.169.46.115,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,User locked out
+2025-05-05 05:15:41,login_attempt,failed,,,101.18.9.141,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Login attempt from new device
+2025-05-10 05:58:07,access,success,,,88.30.156.107,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Accessed admin panel
+2025-05-18 05:33:15,login_attempt,failed,,,33.165.134.108,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,User locked out
+2025-05-07 02:06:55,access,success,markshaffer,14.0,150.188.149.170,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Accessed profile page
+2025-05-07 15:52:57,access,success,russellvictoria,29.0,249.105.157.7,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Accessed admin panel
+2025-05-18 09:28:38,login,failed,ctaylor,13.0,45.100.119.255,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Account locked
+2025-05-17 13:30:21,login,success,john46,41.0,147.198.5.250,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Password expired
+2025-05-11 23:42:02,access,success,,,10.248.168.68,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Accessed marketplace
+2025-05-01 07:14:10,logout,success,jesus57,34.0,58.92.195.122,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,User logged out
+2025-05-08 02:22:02,logout,success,vazquezpaul,43.0,67.252.234.164,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,User logged out
+2025-05-01 14:23:59,login_attempt,success,pereznatalie,15.0,90.211.111.180,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,User locked out
+2025-05-17 21:42:54,login_attempt,success,baguirre,3.0,106.30.9.52,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,User locked out
+2025-05-07 03:03:25,login,success,,,154.63.221.120,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,User logged in successfully
+2025-05-16 22:16:09,login_attempt,failed,,,153.202.3.13,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,User locked out
+2025-05-15 16:15:17,access,success,jackiesanchez,49.0,255.44.255.24,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Accessed admin panel
+2025-05-16 07:46:38,logout,success,vazquezpaul,43.0,88.50.40.9,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,User logged out
+2025-05-05 15:57:27,login,success,david71,6.0,99.63.160.42,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Password expired
+2025-05-04 01:06:11,access,success,ejohnson,28.0,207.99.118.179,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Accessed marketplace
+2025-05-04 05:17:05,access,success,tarapowell,24.0,30.18.164.51,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Accessed marketplace
+2025-05-09 01:11:23,access,success,johnsanders,16.0,135.48.232.153,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Accessed marketplace
+2025-05-12 07:05:04,access,success,kristin58,22.0,34.9.125.24,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Accessed marketplace
+2025-05-01 23:54:11,access,success,,,156.66.221.168,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Accessed admin panel
+2025-05-14 15:59:49,access,success,dmay,7.0,119.143.171.252,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Accessed marketplace
+2025-05-05 14:03:15,login_attempt,success,debraturner,45.0,224.20.180.153,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,User locked out
+2025-05-05 00:37:13,login,success,renee61,10.0,232.252.123.190,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Account locked
+2025-05-16 23:53:45,login,failed,renee61,10.0,169.77.132.102,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Password expired
+2025-05-04 10:59:44,login,success,jared73,19.0,160.10.253.249,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Invalid credentials
+2025-05-05 00:45:05,login,success,randy69,35.0,161.37.81.175,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Account locked
+2025-05-11 15:03:10,logout,success,jkelly,42.0,174.173.92.159,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,User logged out
+2025-05-02 05:28:57,access,success,hamiltonmichael,1.0,97.218.243.159,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Accessed marketplace
+2025-05-13 10:11:52,registration,success,dmay,7.0,94.229.171.30,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Email already used
+2025-05-09 21:00:22,access,success,paularodriguez,9.0,31.31.36.10,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Accessed profile page
+2025-05-04 14:19:29,logout,success,,,56.59.194.123,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,User logged out
+2025-05-05 18:13:07,login,success,nmalone,30.0,119.124.223.104,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Account locked
+2025-05-08 00:05:01,access,success,,,162.125.99.166,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Unauthorized access attempt to marketplace
+2025-05-09 17:59:02,registration,success,ejohnson,28.0,170.141.37.121,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,New user registered
+2025-05-09 14:01:06,access,success,,,113.130.138.141,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Accessed admin panel
+2025-05-02 19:10:38,access,success,,,212.109.34.179,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Accessed marketplace
+2025-05-04 02:00:54,login,success,pereznatalie,15.0,88.129.218.30,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Password expired
+2025-05-02 09:06:41,login_attempt,failed,,,119.233.24.186,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,User locked out
+2025-05-15 23:47:51,access,success,,,53.88.120.153,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Accessed profile page
+2025-05-15 03:53:06,login,success,baguirre,3.0,165.128.2.45,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Password expired
+2025-05-16 13:08:24,logout,success,,,71.34.221.190,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,User logged out
+2025-05-08 20:47:14,registration,success,tarapowell,24.0,55.180.255.245,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Username already exists
+2025-05-01 08:15:08,logout,success,arthurholden,40.0,22.12.59.22,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,User logged out
+2025-05-06 05:52:52,login_attempt,failed,,,235.11.160.55,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Login attempt from new device
+2025-05-13 03:09:02,login,success,debraturner,45.0,91.9.197.97,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,User logged in successfully
+2025-05-07 10:03:12,access,success,sarah65,48.0,240.4.105.232,Mozilla/5.0 (X11; Ubuntu; Linux x86_64)...,Accessed admin panel
+2025-05-10 04:18:52,access,success,,,63.212.100.134,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Accessed profile page
+2025-05-04 00:39:12,registration,success,sarah65,48.0,79.178.70.89,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Username already exists
+2025-05-05 06:44:50,login,success,,,49.180.91.242,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Invalid credentials
+2025-05-12 14:07:02,access,success,robinsonthomas,38.0,166.191.125.213,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,Accessed profile page
+2025-05-18 14:39:50,access,success,hamiltonmichael,1.0,172.224.194.149,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Accessed marketplace
+2025-05-11 19:56:30,login,success,randy69,35.0,170.241.22.3,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Account locked
+2025-05-01 17:43:48,logout,success,,,33.106.199.242,Mozilla/5.0 (Windows NT 10.0; Win64; x64)...,User logged out
+2025-05-18 19:53:46,login_attempt,failed,,,24.60.150.113,Mozilla/5.0 (Linux; Android 10; SM-G970F)...,Login attempt from new device
+2025-05-04 08:39:43,registration,success,virginia50,31.0,164.147.72.144,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,New user registered
+2025-05-16 02:30:47,registration,success,jackiesanchez,49.0,254.150.31.250,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)...,Username already exists
+2025-05-18 20:00:00,login_attempt,failed,saif,999,192.168.1.199,Mozilla/5.0 (Windows NT 10.0; SQLInjectionTester),Attempted category filter injection: Electronics'
+2025-05-18 20:02:00,login_attempt,failed,saif,999,192.168.1.199,Mozilla/5.0 (Windows NT 10.0; SQLInjectionTester),Tested ORDER BY 1 - no error
+2025-05-18 20:04:00,login_attempt,failed,saif,999,192.168.1.199,Mozilla/5.0 (Windows NT 10.0; SQLInjectionTester),Tested ORDER BY 2 - no error
+2025-05-18 20:06:00,login_attempt,failed,saif,999,192.168.1.199,Mozilla/5.0 (Windows NT 10.0; SQLInjectionTester),Tested ORDER BY 3 - no error
+2025-05-18 20:08:00,login_attempt,failed,saif,999,192.168.1.199,Mozilla/5.0 (Windows NT 10.0; SQLInjectionTester),Tested ORDER BY 4 - no error
+2025-05-18 20:10:00,login_attempt,failed,saif,999,192.168.1.199,Mozilla/5.0 (Windows NT 10.0; SQLInjectionTester),"Tested ORDER BY 5 - error received, columns = 4"
+2025-05-18 20:12:00,login_attempt,failed,saif,999,192.168.1.199,Mozilla/5.0 (Windows NT 10.0; SQLInjectionTester),"Tested UNION SELECT 1,2,3,4 - additional products appeared"
+2025-05-18 20:14:00,login_attempt,failed,saif,999,192.168.1.199,Mozilla/5.0 (Windows NT 10.0; SQLInjectionTester),Extracted SQLite version with UNION SELECT
+2025-05-18 20:16:00,login_attempt,failed,saif,999,192.168.1.199,Mozilla/5.0 (Windows NT 10.0; SQLInjectionTester),"Extracted users data with UNION SELECT username,password,id,'users' FROM users"
+2025-05-18 20:18:00,login,success,saif,999,192.168.1.199,Mozilla/5.0 (Windows NT 10.0; SQLInjectionTester),Logged in as administrator using extracted credentials
+2025-05-18 20:18:30,access,success,saif,999,192.168.1.199,Mozilla/5.0 (Windows NT 10.0; SQLInjectionTester),Viewed admin panel with all user data
+2025-05-18 20:19:00,access,success,saif,999,192.168.1.199,Mozilla/5.0 (Windows NT 10.0; SQLInjectionTester),Viewed admin panel with all user data
+2025-05-18 20:19:30,access,success,saif,999,192.168.1.199,Mozilla/5.0 (Windows NT 10.0; SQLInjectionTester),Modified system settings
